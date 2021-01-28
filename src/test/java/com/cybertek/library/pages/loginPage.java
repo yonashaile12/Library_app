@@ -8,14 +8,16 @@ import org.openqa.selenium.support.FindBy;
 public class loginPage extends BasePage{
 
     @FindBy(id = "inputEmail")
-    private WebElement signInElement;
+    public WebElement signInElement;
 
     @FindBy(id = "inputPassword")
-    private WebElement passwordElement;
+    public WebElement passwordElement;
 
     @FindBy()
-    private WebElement dashBoardElement;
+    public WebElement dashBoardElement;
 
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement signInBtn;
 
     public void login(String usernameValue, String passwordValue){
         signInElement.sendKeys(usernameValue);
